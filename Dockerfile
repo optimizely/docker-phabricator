@@ -41,7 +41,7 @@ ARG ARCANIST_COMMIT=c304c4e045
 ARG LIBPHUTIL_COMMIT=55f554b618
 
 WORKDIR /opt
-RUN     bash download.sh phabricator $PHABRICATOR_COMMIT
+RUN     bash download.sh phabricator $PHABRICATOR_COMMIT optimizely
 RUN     bash download.sh arcanist    $ARCANIST_COMMIT
 RUN     bash download.sh libphutil   $LIBPHUTIL_COMMIT
 

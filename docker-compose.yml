@@ -5,11 +5,18 @@
 #  - /var/repo - code repos
 #
 #
-phabricator:
-    build: .
-    links: ['database']
-    ports: ['8081:80']
-
-
-database:
-    build: database/
+version: '2'
+services:
+  phabricator:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        PHABRICATOR_COMMIT: a60580166f
+        ARCANIST_COMMIT: b3ea439f4d
+        LIBPHUTIL_COMMIT: db3667a62f
+    ports: ['80:80']
+    volumes:
+      - ~/.ssh:/root/.ssh
+    environment:
+      LOCAL_JSON: $PHABRICATOR_LOCAL_JSON
