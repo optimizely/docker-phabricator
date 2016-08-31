@@ -15,7 +15,7 @@ services:
         PHABRICATOR_COMMIT: a60580166f
         ARCANIST_COMMIT: b3ea439f4d
         LIBPHUTIL_COMMIT: db3667a62f
-    ports: ['80:80']
+    ports: ['80:8080']
     volumes:
       - ~/.ssh:/root/.ssh
     environment:

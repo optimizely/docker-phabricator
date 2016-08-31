@@ -63,7 +63,7 @@ RUN     ln -s /usr/lib/git-core/git-http-backend /opt/phabricator/support/bin
 RUN     /opt/phabricator/bin/config set phd.user "root"
 RUN     echo "www-data ALL=(ALL) SETENV: NOPASSWD: /opt/phabricator/support/bin/git-http-backend" >> /etc/sudoers
 
-EXPOSE  80
+EXPOSE  8080
 ADD     entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD     ["start-server"]
