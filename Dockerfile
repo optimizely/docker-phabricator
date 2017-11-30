@@ -2,7 +2,7 @@
 # Docker image for running https://github.com/phacility/phabricator
 #
 
-FROM    debian:jessie
+FROM    debian:wheezy-slim
 MAINTAINER  Yvonnick Esnault <yvonnick@esnau.lt>
 
 ENV DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
